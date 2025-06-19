@@ -9,6 +9,7 @@ import matplotlib.pyplot as plt
 from indoNLP.preprocessing import replace_slang, emoji_to_words
 from Sastrawi.StopWordRemover.StopWordRemoverFactory import StopWordRemoverFactory, StopWordRemover, ArrayDictionary
 from Sastrawi.Stemmer.StemmerFactory import StemmerFactory
+from pathlib import Path
 
 st.set_page_config(page_title="Bullying Comment Detector", layout="wide")
 

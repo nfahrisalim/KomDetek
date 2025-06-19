@@ -1,6 +1,6 @@
 # KomDetek – Deteksi Komentar Bullying dari TikTok
 
-**KomDetek** adalah aplikasi berbasis Streamlit untuk mendeteksi komentar bullying yang diambil **khusus dari platform TikTok**. Aplikasi ini dirancang untuk mempermudah analisis komentar secara individual maupun dalam jumlah besar melalui file CSV.
+**KomDetek** adalah aplikasi Streamlit yang digunakan untuk mendeteksi komentar bullying yang berasal **khusus dari platform TikTok**. Aplikasi ini memungkinkan pengguna untuk mengklasifikasi komentar secara real-time ataupun dari file CSV.
 
 ![KomDetek Logo](img/KomDetek.png)
 
@@ -8,33 +8,40 @@
 
 ## 🎯 Fitur Utama
 
-- **Input Manual** untuk mendeteksi satu komentar TikTok.
-- **Upload CSV** berisi komentar TikTok untuk deteksi batch.
-- **Visualisasi Pie Chart** yang menunjukkan proporsi komentar bullying dan non-bullying.
-- **Tabel Hasil Klasifikasi** yang interaktif dan mudah dibaca.
+- Deteksi komentar TikTok satuan melalui input teks.
+- Deteksi batch dari file CSV.
+- Visualisasi hasil deteksi dalam bentuk pie chart.
+- Tabel hasil klasifikasi yang interaktif.
 
 ---
 
-## 📦 Teknologi
+## 🧰 Teknologi
 
 - Python 3.10
 - Streamlit
-- Scikit-learn (SVM)
+- Scikit-learn (SVM, Logistic Regression, Naive Bayes)
+- LSTM (Keras)
 - IndoNLP & Sastrawi untuk preprocessing Bahasa Indonesia
 
 ---
 
-## 🧠 Model Deteksi
+## 🧠 Model yang Digunakan
 
-Model klasifikasi teks menggunakan algoritma **Support Vector Machine (SVM)**, dilatih hanya dengan data **komentar TikTok** yang sudah melalui proses labeling dan pembersihan teks.
+Semua model dilatih dari **komentar TikTok asli**, termasuk:
+
+- `svm_model.pkl`
+- `logistic_regression_model.pkl`
+- `naive_bayes_model.pkl`
+- `lstm_model.h5`
+- `vectorizer.pkl` (TF-IDF)
 
 ---
 
 ## 🖼 Tampilan Aplikasi
 
-### 📤 Deteksi dari File CSV
+### 📤 Upload Komentar TikTok via CSV
 
-![Submit CSV](img/Submit_CSV.png)
+![Submit CSV](img/Submit_Csv.png)
 
 ### ✍️ Deteksi Komentar Manual
 
@@ -45,16 +52,23 @@ Model klasifikasi teks menggunakan algoritma **Support Vector Machine (SVM)**, d
 ## 📁 Struktur Folder
 
 ```bash
-tiktokcyberbullying/
+.
+├── README.md
+├── requirements.txt
+├── tiktokscraped.csv
+├── web.py
+│
+├── .streamlit/
+│   └── config.toml
 │
 ├── img/
 │   ├── KomDetek.png
-│   ├── Submit_CSV.png
+│   ├── Submit_Csv.png
 │   └── Submit_Words.png
 │
-├── web.py
-├── model/
-│   └── svm_model.pkl
-├── requirements.txt
-└── .streamlit/
-    └── config.toml
+└── models/
+    ├── svm_model.pkl
+    ├── logistic_regression_model.pkl
+    ├── naive_bayes_model.pkl
+    ├── lstm_model.h5
+    └── vectorizer.pkl
