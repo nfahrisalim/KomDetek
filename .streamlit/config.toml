@@ -5,4 +5,4 @@ secondaryBackgroundColor = "#2D3142"  # Abu gelap lembut
 textColor = "#E0E0E0"                 # Abu terang
 
 [python]
-version = "3.10.13"
+version = "3.10"
