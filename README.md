@@ -1,70 +1,72 @@
-# KomDetek – Deteksi Komentar Bullying dari TikTok
+# 🛡️ KomDetek – TikTok Comment Bullying Detection
 
-**KomDetek** adalah aplikasi Streamlit yang digunakan untuk mendeteksi komentar bullying yang berasal **khusus dari platform TikTok**. Aplikasi ini memungkinkan pengguna untuk mengklasifikasi komentar secara real-time ataupun dari file CSV.
+**KomDetek** is a Streamlit-based application designed to **detect bullying comments specifically from TikTok**. It allows users to classify comments in real-time or in bulk via CSV upload.
 
 ![KomDetek Logo](img/KomDetek.png)
 
 ---
 
-## 🎯 Fitur Utama
+## 🎯 Key Features
 
-- Deteksi komentar TikTok satuan melalui input teks.
-- Deteksi batch dari file CSV.
-- Visualisasi hasil deteksi dalam bentuk pie chart.
-- Tabel hasil klasifikasi yang interaktif.
-
----
-
-## 🧰 Teknologi
-
-- Python 3.10
-- Streamlit
-- Scikit-learn (SVM, Logistic Regression, Naive Bayes)
-- LSTM (Keras)
-- IndoNLP & Sastrawi untuk preprocessing Bahasa Indonesia
+* Detect individual TikTok comments through text input.
+* Batch detection from CSV files.
+* Visualize classification results with an interactive pie chart.
+* Display classification output in an interactive table.
 
 ---
 
-## 🧠 Model yang Digunakan
+## 🧰 Tech Stack
 
-Semua model dilatih dari **komentar TikTok asli**, termasuk:
-
-- `svm_model.pkl`
-- `logistic_regression_model.pkl`
-- `naive_bayes_model.pkl`
-- `lstm_model.h5`
-- `vectorizer.pkl` (TF-IDF)
+* Python 3.10
+* Streamlit
+* Scikit-learn (SVM, Logistic Regression, Naive Bayes)
+* Keras (LSTM model)
+* IndoNLP & Sastrawi – Indonesian language preprocessing
 
 ---
-## 📓 Link Notebook Colab
 
-Untuk melihat proses training dan preprocessing dataset dapat dilihat pada notebook Google Colab berikut:
+## 🧠 Models Used
 
-👉 [Klik di sini untuk membuka Notebook Colab](https://colab.research.google.com/drive/1QQB4o4Eqn4RObcmGNNvLlhokYGYVf7TS?usp=sharing)
+All models were trained on **real TikTok comment data**, including:
 
-## 🖼 Tampilan Aplikasi
+* `svm_model.pkl`
+* `logistic_regression_model.pkl`
+* `naive_bayes_model.pkl`
+* `lstm_model.h5`
+* `vectorizer.pkl` (TF-IDF)
 
-### 📤 Upload Komentar TikTok via CSV
+---
+
+## 📓 Training & Preprocessing Notebook
+
+Explore the full training and preprocessing workflow in Google Colab:
+👉 [Open Training Notebook](https://colab.research.google.com/drive/1QQB4o4Eqn4RObcmGNNvLlhokYGYVf7TS?usp=sharing)
+
+---
+
+## 🖼 App Screenshots
+
+### 📤 Upload TikTok Comments via CSV
 
 ![Submit CSV](img/Submit_Csv.png)
 
-### ✍️ Deteksi Komentar Manual
+### ✍️ Manual Comment Input
 
 ![Submit Manual](img/Submit_Words.png)
 
 ---
 
-## 📁 Struktur Folder
+## 📁 Project Structure
 
 ```bash
 .
 ├── README.md
 ├── requirements.txt
 ├── tiktokscraped.csv
-├── web.py
+├── web.py                  # Streamlit app entry point
 │
 ├── .streamlit/
-│   └── config.toml
+│   └── config.toml         # App configuration
 │
 ├── img/
 │   ├── KomDetek.png
@@ -77,3 +79,6 @@ Untuk melihat proses training dan preprocessing dataset dapat dilihat pada noteb
     ├── naive_bayes_model.pkl
     ├── lstm_model.h5
     └── vectorizer.pkl
+```
+
+---
