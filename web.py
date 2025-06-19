@@ -104,7 +104,7 @@ def main():
     )
 
     if menu_selection == "Home":
-        logo = Image.open(r'img\\KomDetek.png')
+        logo = Image.open(Path("img") / "KomDetek.png")
         st.image(logo, use_container_width=True)
 
         st.markdown("<h1 style='text-align:center; color:#E4A800;'>Machine Learning - Kelompok 6B</h1>", unsafe_allow_html=True)
