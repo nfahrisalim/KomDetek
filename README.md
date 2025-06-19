@@ -36,6 +36,11 @@ Semua model dilatih dari **komentar TikTok asli**, termasuk:
 - `vectorizer.pkl` (TF-IDF)
 
 ---
+## 📓 Link Notebook Colab
+
+Untuk melihat proses training dan preprocessing dataset dapat dilihat pada notebook Google Colab berikut:
+
+👉 [Klik di sini untuk membuka Notebook Colab](https://colab.research.google.com/drive/1QQB4o4Eqn4RObcmGNNvLlhokYGYVf7TS?usp=sharing)
 
 ## 🖼 Tampilan Aplikasi
 
