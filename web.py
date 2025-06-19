@@ -130,7 +130,7 @@ def main():
         """)
 
         st.markdown("#### \U0001F4CA Dataset Overview")
-        df = pd.read_csv(r'D:\Data Science\tiktok scrape\tiktokscraped.csv')
+        df = pd.read_csv(r'tiktokscraped.csv')
         search = st.text_input("\U0001F50D Cari komentar")
         if search:
             st.dataframe(df[df['Text'].str.contains(search, case=False)], use_container_width=True)
