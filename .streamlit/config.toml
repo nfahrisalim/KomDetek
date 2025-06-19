@@ -3,3 +3,6 @@ primaryColor = "#f42106"              # Merah terang
 backgroundColor = "#1E1E2F"           # Gelap keunguan modern
 secondaryBackgroundColor = "#2D3142"  # Abu gelap lembut
 textColor = "#E0E0E0"                 # Abu terang
+
+[python]
+version = "3.10.13"
