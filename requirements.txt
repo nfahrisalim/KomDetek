@@ -1,0 +1,13 @@
+indoNLP
+joblib
+keras
+numpy
+pandas
+Sastrawi
+streamlit
+streamlit-option-menu
+setuptools
+tensorflow
+scikit-learn
+matplotlib
+seaborn
