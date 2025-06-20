@@ -1,5 +1,7 @@
 # 🛡️ KomDetek – TikTok Comment Bullying Detection
 
+🔗 **Try it live**: [komdetek.streamlit.app](https://komdetek.streamlit.app/)
+
 **KomDetek** is a Streamlit-based application designed to **detect bullying comments specifically from TikTok**. It allows users to classify comments in real-time or in bulk via CSV upload.
 
 ![KomDetek Logo](img/KomDetek.png)
