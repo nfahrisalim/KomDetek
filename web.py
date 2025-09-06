@@ -108,15 +108,6 @@ def main():
         logo = Image.open(Path("img") / "KomDetek.png")
         st.image(logo, use_container_width=True)
 
-        st.markdown("<h1 style='text-align:center; color:#E4A800;'>Machine Learning - Kelompok 6B</h1>", unsafe_allow_html=True)
-        st.markdown("""
-        <table>
-            <tr><th>Nama Anggota</th><th>NIM</th></tr>
-            <tr><td>Muh. Naufal Fahri Salim</td><td>H071231031</td></tr>
-            <tr><td>Muh. Aipun Pratama</td><td>H071231045</td></tr>
-        </table>
-        """, unsafe_allow_html=True)
-
         st.markdown("<hr>", unsafe_allow_html=True)
         st.markdown('<div style="text-align: center"><h2>\U0001F3AF Deteksi Komentar Bullying di Media Sosial</h2></div>', unsafe_allow_html=True)
         st.write("Aplikasi ini digunakan untuk mendeteksi komentar TikTok apakah mengandung unsur bullying atau tidak.")
@@ -176,6 +167,15 @@ def main():
 
         with tab2:
             st.markdown('<div class="header-box">Unggah file CSV dengan komentar</div><br>', unsafe_allow_html=True)
+            st.info("Pastikan file CSV memiliki kolom bernama 'Text'. Anda dapat menambahkan kolom lain seperti 'Keterangan' jika diperlukan. Contoh format:")
+            st.markdown("""
+            <pre>
+Text,Keterangan
+Komentar pertama,Ini komentar dari user A
+Komentar kedua,Komentar dari user B
+Komentar ketiga,Komentar random
+</pre>
+            """, unsafe_allow_html=True)
             uploaded_file = st.file_uploader("Unggah file CSV", type="csv")
 
             if uploaded_file:
@@ -216,3 +216,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+    st.markdown("<div style='text-align:center; margin-top:30px;'>Made by <a href='https://nfahrisalim.com' target='_blank' style='color:#E4A800; text-decoration:underline;'>Naufal Fahri</a></div>", unsafe_allow_html=True)
